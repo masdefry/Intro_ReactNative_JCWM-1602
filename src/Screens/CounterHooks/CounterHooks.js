@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import { Button, Text, TextInput, View } from 'react-native'
 
 const CounterHooks = () => {
@@ -13,6 +13,22 @@ const CounterHooks = () => {
         name: '',
         address: ''
     })
+
+    // componentDidMount
+    useEffect(() => {
+        getData()
+    }, [])
+
+    // componentDidUpdate
+    useEffect(() => {
+        console.log('Hello')
+    }, [counter, inputUser])
+
+    const getData = () => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => response.json())
+        .then(json => console.log(json))
+    }
 
     return(
         <>
