@@ -10,10 +10,12 @@ import React from 'react';
 
 // Screens
 import BasicComponent from './src/Screens/BasicComponent/BasicComponent'
+import CounterHooks from './src/Screens/CounterHooks/CounterHooks'
 
 const App = () => {
   return(
-    <BasicComponent />
+    // <BasicComponent />
+    <CounterHooks />
   )
 }
 
