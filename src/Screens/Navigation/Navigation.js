@@ -98,6 +98,9 @@ const Cart = () => {
     )
 }
 
+//  ######
+// Entry Point Profile
+
 // Screen Profile
 const Profile = () => {
     return(
@@ -117,3 +120,6 @@ export default StackNavigation
     // Product
     // Cart
     // Profile
+        // Edit Profile
+        // Edit Password
+        // History Transaction
