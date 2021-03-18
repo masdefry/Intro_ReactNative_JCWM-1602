@@ -1,6 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { Button, Text, TextInput, View } from 'react-native'
 
+// STYLES
+import color from './../../Supports/Styles/Color'
+
 const CounterHooks = () => {
 
     // const [Variable, SetterVariable] = useState(InitialValue)
@@ -33,7 +36,7 @@ const CounterHooks = () => {
     return(
         <>
             <View>
-                <Text style={{marginTop: 30, textAlign: 'center', fontSize: 30, fontWeight: 'bold'}}>
+                <Text style={{marginTop: 30, textAlign: 'center', fontSize: 30, fontWeight: 'bold', ...color.secondary}}>
                     Counter Hooks Apps
                 </Text>
             </View>
