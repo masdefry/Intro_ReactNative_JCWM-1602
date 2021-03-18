@@ -11,11 +11,13 @@ import React from 'react';
 // Screens
 import BasicComponent from './src/Screens/BasicComponent/BasicComponent'
 import CounterHooks from './src/Screens/CounterHooks/CounterHooks'
+import Layouting from './src/Screens/Layouting/Layouting'
 
 const App = () => {
   return(
     // <BasicComponent />
-    <CounterHooks />
+    // <CounterHooks />
+    <Layouting />
   )
 }
 
