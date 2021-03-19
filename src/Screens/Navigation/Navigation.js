@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 const Stack = createStackNavigator()
 const StackNavigation = () => {
@@ -44,7 +45,7 @@ const Register = () => {
 
 // ####################################################################################################
 
-const HomeStack = createStackNavigator()
+const HomeStack = createBottomTabNavigator()
 const HomeStackNavigation = () => {
     return(
         <HomeStack.Navigator>
