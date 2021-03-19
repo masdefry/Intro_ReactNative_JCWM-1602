@@ -51,7 +51,7 @@ const HomeStackNavigation = () => {
             <HomeStack.Screen name='Home' component={Home} />
             <HomeStack.Screen name='Product' component={Product} />
             <HomeStack.Screen name='Cart' component={Cart} />
-            <HomeStack.Screen name='Profile' component={Profile} />
+            <HomeStack.Screen name='Profile' component={ProfileStackNavigation} options={{headerShown: false}} />
         </HomeStack.Navigator>
     )
 }
@@ -69,7 +69,7 @@ const Home = ({navigation: {navigate}}) => {
             <Text style={{color: 'blue', fontStyle: 'italic'}}>
                 CART
             </Text>
-            <Text style={{color: 'blue', fontStyle: 'italic'}}>
+            <Text style={{color: 'blue', fontStyle: 'italic'}} onPress={() => navigate('Profile')}>
                 PROFILE
             </Text>
         </View>
@@ -98,8 +98,19 @@ const Cart = () => {
     )
 }
 
-//  ######
+// ####################################################################################################
 // Entry Point Profile
+const ProfileStack = createStackNavigator()
+const ProfileStackNavigation = () => {
+    return(
+        <ProfileStack.Navigator>
+            <ProfileStack.Screen name='Profile' component={Profile} />
+            <ProfileStack.Screen name='Edit Profile' component={EditProfile} />
+            <ProfileStack.Screen name='Edit Password' component={EditPassword} />
+            <ProfileStack.Screen name='Transaction History' component={TransactionHistory} />
+        </ProfileStack.Navigator>
+    )
+}
 
 // Screen Profile
 const Profile = () => {
@@ -107,6 +118,45 @@ const Profile = () => {
         <View style={{height: '100%', justifyContent: 'center', alignItems: 'center'}}>
             <Text>
                 This is Profile Screen
+            </Text>
+            <Text style={{color: 'blue', fontStyle: 'italic'}}>
+                EDIT PROFILE
+            </Text>
+            <Text style={{color: 'blue', fontStyle: 'italic'}}>
+                EDIT PASSWORD
+            </Text>
+            <Text style={{color: 'blue', fontStyle: 'italic'}}>
+                TRANSACTION HISTORY
+            </Text>
+        </View>
+    )
+}
+
+const EditProfile = () => {
+    return(
+        <View style={{height: '100%', justifyContent: 'center', alignItems: 'center'}}>
+            <Text>
+                EDIT PROFILE
+            </Text>
+        </View>
+    )
+}
+
+const EditPassword = () => {
+    return(
+        <View style={{height: '100%', justifyContent: 'center', alignItems: 'center'}}>
+            <Text>
+                EDIT PASSWORD
+            </Text>
+        </View>
+    )
+}
+
+const TransactionHistory = () => {
+    return(
+        <View style={{height: '100%', justifyContent: 'center', alignItems: 'center'}}>
+            <Text>
+                TRANSACTION HISTORY
             </Text>
         </View>
     )
@@ -122,4 +172,4 @@ export default StackNavigation
     // Profile
         // Edit Profile
         // Edit Password
-        // History Transaction
+        // Transaction History
